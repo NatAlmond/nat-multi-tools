@@ -118,7 +118,7 @@ def download_media(url: str, download_type: str, quality: str) -> dict:
 
 @app.get("/", response_class=HTMLResponse)
 def serve_frontend():
-    html_path = Path(__file__).parent / "nat-multi-tools.html"
+    html_path = Path(__file__).parent / "nat-multi-tools-1.html"
     if html_path.exists():
         return HTMLResponse(content=html_path.read_text(encoding="utf-8"))
     return HTMLResponse("<h1>nat-multi-tools.html tidak ditemukan</h1>", status_code=404)
